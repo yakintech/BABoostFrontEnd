@@ -1,0 +1,11 @@
+.product{
+    width: 100px;
+    height: 100px;
+    background-color: #fff0ff;
+}
+#main{
+    font-size: 40px;
+}
+body{
+    margin:0px;
+}
