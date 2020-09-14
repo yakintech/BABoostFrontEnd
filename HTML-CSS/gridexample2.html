@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        ul {
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .header {
+            height: 56px;
+            background-color: #343A40;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .container {
+            padding-left: 10%;
+            padding-right: 10%;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 10px;
+        }
+
+        a:hover {
+            color: #666B6E;
+        }
+
+        .main {
+            display: grid;
+            grid-template-rows: 346px 346px;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap: 17px;
+            grid-column-gap: 20px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .main {
+                grid-template-rows: 346px;
+                grid-template-columns: auto;
+            }
+
+            .box {
+                grid-column: 1/2;
+            }
+        }
+
+        .slider {
+            grid-column: 1/5;
+            grid-row: 1/2;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #E9ECEF;
+        }
+
+        .box {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div class="container">
+            <a href="#">Start Bootstrap</a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="padding-left: 10%; padding-right: 10%;">
+        <div class="main">
+            <div class="slider">
+                <h1>A Warm Welcome!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt
+                    possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat
+                    numquam repellat.</p>
+            </div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic quisquam earum omnis
+                repellat quam deleniti aspernatur. Debitis dolores itaque odit minima nesciunt harum, nihil hic quos
+                sunt dolor ex.</div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic quisquam earum omnis
+                repellat quam deleniti aspernatur. Debitis dolores itaque odit minima nesciunt harum, nihil hic quos
+                sunt dolor ex.</div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic quisquam earum omnis
+                repellat quam deleniti aspernatur. Debitis dolores itaque odit minima nesciunt harum, nihil hic quos
+                sunt dolor ex.</div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic quisquam earum omnis
+                repellat quam deleniti aspernatur. Debitis dolores itaque odit minima nesciunt harum, nihil hic quos
+                sunt dolor ex.</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
