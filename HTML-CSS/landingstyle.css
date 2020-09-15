@@ -1,3 +1,4 @@
+/* Header Start */
 a{
     color: #000000;
     text-decoration:none !important;
@@ -19,3 +20,73 @@ a:hover{
 .headerbox a{
     font-size:20px;
 }
+/* Header End */
+
+/* Slayt Start */
+.slide {
+    height: 594px;
+    background-image: url('https://startbootstrap.github.io/startbootstrap-landing-page/img/bg-masthead.jpg');
+    background-size: cover;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide h1 {
+    color: #ffffff;
+}
+
+.slidesignup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.slidesignup input {
+    width: 60%;
+}
+
+.slidesignup button {
+    margin-left: 2%;
+}
+/* Slayt End */
+
+/* Features start */
+.features {
+    background-color: #F8F9FA;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.box {
+    text-align: center;
+}
+
+.box i {
+    color: #88C0FC;
+    font-size: 80px;
+}
+
+/* Features End */
+
+/* Responsive */
+@media only screen and (max-width: 800px) {
+    .slidesignup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .slidesignup button {
+        margin-top: 10px;
+    }
+
+}
+
+/* End responsive */
