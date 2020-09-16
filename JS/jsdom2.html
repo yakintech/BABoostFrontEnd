@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <button onclick="Degis()">Boyut Değiştir</button>
+    <button onclick="Yoket()">YOK ET!</button>
+
+</body>
+</html>
+<script>
+
+    //Divin displayini none yapar
+    function Yoket(){
+        document.getElementById("content").style.display = "none";
+    }
+
+    //Bu fonksiyon çalıştığında div genişliği 400 yüksekliği 400 olsun
+    function Degis(){
+        document.getElementById('content').style.width = "400px";
+        document.getElementById('content').style.height = "400px";
+    }
+</script>
