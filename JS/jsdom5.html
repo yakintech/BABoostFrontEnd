@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <div>
+        <label for="">Genişlik</label>
+        <input type="text" id="genislik">
+    </div>
+    <div>
+        <label for="">Yükseklik</label>
+        <input type="text" id="yukseklik">
+    </div>
+    <button onclick="Degis()">Boyut Değiştir</button>
+</body>
+
+</html>
+<script>
+    //Buton tıklandığında genişlik değeri alınıp box ın genişliğine atanır. Yükseklik değeri boxın yüksekliğine atanır
+    function Degis() {
+        document.getElementById("box").style.width = document.getElementById("genislik").value + "px";
+
+        document.getElementById("box").style.height = document.getElementById("yukseklik").value + "px";
+    }
+</script>

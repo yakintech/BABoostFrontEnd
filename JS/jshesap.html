@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="sayi1">
+        <input type="text" name="" id="sayi2">
+    </div>
+    <div>
+        <button onclick="Carp()">Çarp</button>
+        <button onclick="Topla()">Topla</button>
+    </div>
+</body>
+</html>
+<script>
+
+    function Carp(){
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+        
+        var sonuc = x * y;
+        console.log(sonuc);
+    }
+
+
+    function Topla(){
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+
+        var sonuc = Number(x) + Number(y);
+        // var sonuc = +x + +y;
+
+        console.log(sonuc);
+    }
+
+</script>

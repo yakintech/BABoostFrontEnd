@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Butona tıkladığında console a ad ve soyadı aralarında boşluk bırakacak şekilde yazdırın -->
+    <div>
+        <label for="">Name:</label>
+        <input type="text" name="" id="name">
+    </div>
+    <div>
+        <label for="">SurName:</label>
+        <input type="text" name="" id="surname">
+    </div>
+    <button onclick="Yazdir()">Yaz</button>
+</body>
+</html>
+<script>
+    function Yazdir(){
+
+        var x = document.getElementById("name").value;
+        var y = document.getElementById("surname").value;
+
+        console.log(x + " " + y);
+        // console.log(document.getElementById("name").value + " " + document.getElementById("surname").value)
+    }
+</script>

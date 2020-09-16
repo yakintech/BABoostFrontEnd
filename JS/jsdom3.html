@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select id="metal" onchange="Icerikbas()">
+        <option value="1">Iron Maiden</option>
+        <option value="2">Parkway Drive</option>
+        <option value="3">Dio</option>
+        <option value="4">Ommph</option>
+    </select>
+
+
+    <p id="icerik">BOŞ</p>
+</body>
+</html>
+<script>
+    function Icerikbas(){
+        // console.log(document.getElementById("metal").value);
+
+        document.getElementById("icerik").innerHTML = document.getElementById("metal").value;
+        // console.log(this);
+        // console.log("console a data yazdırıyorum");
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="sayi">
+    </div>
+    <div>
+        <button onclick="Karehesap()">Hesapla</button>
+    </div>
+</body>
+
+</html>
+<script>
+    // Inputa girilen datanın karesini al console a yazdır
+    function Karehesap() {
+        var sayi = document.getElementById("sayi").value;
+        var sonuc = sayi * sayi;
+        console.log(sonuc);
+    }
+</script>
