@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .boom {
+            width: 100px;
+            height: 100px;
+            /* background-image: url('kedi.jpg'); */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>Puanın: </span>
+        <span id="puan"></span>
+    </div>
+    <div class="container">
+        <div>
+            <button id="btn1" class="boom" onclick="Show(this)"></button>
+            <button id="btn2" class="boom" onclick="Show(this)"></button>
+            <button id="btn3" class="boom" onclick="Show(this)"></button>
+            <button id="btn4" class="boom" onclick="Show(this)"></button>
+            <button id="btn5" class="boom" onclick="Show(this)"></button>
+
+        </div>
+        <div>
+            <button id="btn6" class="boom" onclick="Show(this)"></button>
+            <button id="btn7" class="boom" onclick="Show(this)"></button>
+            <button id="btn8" class="boom" onclick="Show(this)"></button>
+            <button id="btn9" class="boom" onclick="Show(this)"></button>
+            <button id="btn10" class="boom" onclick="Show(this)"></button>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var puan = 0;
+    var rastgele = Math.floor((Math.random() * 10) + 1);
+
+    function Show(btn) {
+        var tiklanilan = btn.id.replace("btn", "");
+
+        if (rastgele == tiklanilan) {
+            btn.style.backgroundImage = "url('./boom.jpg')";
+            alert("Kaybettiniz");
+            puan =0;
+            document.getElementById("puan").innerHTML = puan;
+        }
+        else {
+            btn.style.backgroundColor = "aqua";
+            puan++;
+            document.getElementById("puan").innerHTML = puan;
+        }
+    }
+
+</script>
