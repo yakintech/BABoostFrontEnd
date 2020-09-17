@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="city">
+    </div>
+    <div>
+        <button onclick="AddCity()">Ekle</button>
+    </div>
+</body>
+
+</html>
+<script>
+    //Butona bastığında inputtan datayı alıp sehirler dizisine eklesin
+    function AddCity() {
+        var city = document.getElementById("city").value;
+        sehirler.push(city);
+    }
+
+
+
+    var sehir = "Berlin";
+    var sehir2 = "Paris";
+    var sehir3 = "Edirne";
+
+    var sayilar = [-2, 44, 11, 4.5, -9.87];
+    var sehirler = ['İzmir', 'İstanbul', 'Trabzon', 'Diyarbakır', 'Urfa'];
+
+    //dizi fonksiyonları, özellikleri
+
+    //1) sehirler dizisi kaç elemanlı
+    console.log(sehirler.length);
+
+    //2) dizinin 4. elemanını yazdır
+    console.log(sehirler[3])
+
+    //3) sayilar dizisini sırala
+    console.log(sayilar.sort(function (a, b) { return a - b }))
+
+    //4) şehirler dizisini ters çevir
+    //console.log(sehirler.reverse())
+
+    //5) Belirli bir kuralda elemanları yakala
+    console.log(sehirler.slice(2, 4));
+
+    //6) Elemanın olup olmadığını kontrol eder
+    console.log(sehirler.includes('İzmir'));
+
+    //7) Elemanın nerede olduğunu söyler. Eğer elemanı bulamazsa -1 döner
+    console.log(sehirler.indexOf('İzmir'));
+
+
+    var hege = ["Cecilie", "Lone"];
+    var stale = ["Emil", "Tobias", "Linus"];
+    var kai = ["Robin"];
+    var children = hege.concat(stale, kai);
+
+</script>
