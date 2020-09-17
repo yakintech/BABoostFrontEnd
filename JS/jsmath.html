@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+            position: relative;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    <button onclick="Git()">DIV Gidiyor</button>
+</body>
+</html>
+<script>
+
+//Butona tıkladığımda DIV saniyede 1 rastgele 0-100 arasında değer alıp sağa doğru ilerlesin.
+
+function Git(){
+    var left = 0;
+    
+    setInterval(() => {
+        var rastgele = Math.floor(Math.random() * 100);
+        left = Number(left) + Number(rastgele);
+        document.getElementById("main").style.left = left + "px";
+
+    }, 500);
+
+}
+
+
+
+console.log(Math.random());
+Math.floor(2.5);
+
+//0 ile 10 arasında rastgele bir TAMSAYI oluştur
+Math.floor(Math.random() * 10);
+
+//0 ile 100 arasında rastgele bir TAMSAYI oluştur
+Math.floor(Math.random() * 100);
+
+
+</script>
