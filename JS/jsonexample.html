@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    var kisi = { name: 'Çağatay', surname: 'Yıldız' };
+    // console.log(kisi.name + ' ' + kisi.surname);
+
+    var person = { name: 'Berk', cities: ['Karabük', 'Çanakkale', 'İstanbul'] };
+
+    //Ekrana Berk - Çanakkale
+    //console.log(person.name + ' - ' + person.cities[1])
+
+    var product = {
+        name: 'IPhone',
+        price: 5000,
+        category: {
+            name: 'Elektronik',
+            description: 'Elektronik ürünleri içerir'
+        }
+    }
+
+    // Elektronik - IPhone - 5000
+    // console.log(product.category.name + ' - ' + product.name + ' - ' + product.price)
+
+
+
+    var urunler = [
+        { name: 'Mouse', price: 250 },
+        { name: 'Keyboard', price: 350 },
+        { name: 'USB', price: 50 },
+    ]
+
+    //Ürünlerin fiyat ortalaması nedir?
+    var toplam = 0;
+    for (i = 0; i < urunler.length; i++){
+        toplam = toplam + urunler[i].price;
+    }
+
+    var ortalama = toplam / urunler.length;
+    console.log(ortalama);
+
+
+
+    // console.log(urunler[2].name);
+
+    //urunlerin TOPLAM fiyatını bul
+    // var toplam = 0;
+    // for (i = 0; i < urunler.length; i++){
+    //     toplam = toplam + urunler[i].price;
+    // }
+
+    // console.log('Ürünlerin toplam fiyatı: ' + toplam);
+
+</script>
