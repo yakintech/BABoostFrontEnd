@@ -1010,18 +1010,30 @@ var y = x.replaceAll('(','').replaceAll(')','').replaceAll(' ','').replaceAll('-
     //(100) 555-4822
     //1005554822
     //ürün adı - tedarikçi adı - telefon
+    // for (i = 0; i < products.length; i++) {
+    //     if (products[i].supplier != undefined) {
+
+    //         var viewdata = products[i].name + " - " + products[i].supplier.companyName + ' - ' + products[i].supplier.address.phone.replaceAll('(','').replaceAll(')','').replaceAll(' ','').replaceAll('-','');
+
+    //         var pelemet = document.createElement('p');
+    //         pelemet.innerHTML = viewdata;
+    //         document.body.appendChild(pelemet);
+    //     }
+
+    // }
+
+    //ürülerin adını ve stok durumunu p içerisinde listele. Eğer stok 0 ise p color tomata olsun
+
     for (i = 0; i < products.length; i++) {
+        
+        var pelement = document.createElement('p');
+        pelement.innerHTML = products[i].name + ' ' + products[i].unitsInStock;
 
-        if (products[i].supplier != undefined) {
-
-            var viewdata = products[i].name + " - " + products[i].supplier.companyName + ' - ' + products[i].supplier.address.phone.replaceAll('(','').replaceAll(')','').replaceAll(' ','').replaceAll('-','');
-
-            var pelemet = document.createElement('p');
-            pelemet.innerHTML = viewdata;
-            document.body.appendChild(pelemet);
+        if(products[i].unitsInStock == 0){
+            pelement.style.color = 'tomato';
         }
 
+        document.body.appendChild(pelement);
     }
-
 
 </script>
