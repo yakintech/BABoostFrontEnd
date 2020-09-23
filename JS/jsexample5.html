@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="data">
+        <button onclick="Tiktak()">Tıkla</button>
+    </div>
+</body>
+
+</html>
+<script>
+    ////Bir input bir buton koy. Butona tıkladıkça sayı girsin.  Sıfır girinceye kadar istediği kadar sayı girişi yapabilmektedir. Sıfır girildiğinde kullanıcının o zamana kadar girdiği sayıların toplamı ve ortalaması bulunarak ekranda gösterilecektir.
+    var toplam = 0;
+    var sayac = 0;
+    function Tiktak() {
+        var x = document.getElementById('data').value;
+
+        if (x == 0) {
+            console.log(toplam + ' ' + (toplam / sayac))
+        }
+        else {
+            toplam = toplam + Number(x);
+            sayac++;
+        }
+    }
+
+  
+
+</script>
