@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magni error, qui animi
+        reprehenderit recusandae quo incidunt deleniti iusto, quos quasi. Sed iure laudantium eos corrupti adipisci
+        obcaecati aliquid ab.</p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magni error, qui animi
+        reprehenderit recusandae quo incidunt deleniti iusto, quos quasi. Sed iure laudantium eos corrupti adipisci
+        obcaecati aliquid ab.</p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magni error, qui animi
+        reprehenderit recusandae quo incidunt deleniti iusto, quos quasi. Sed iure laudantium eos corrupti adipisci
+        obcaecati aliquid ab.</p>
+
+
+    <button onclick="Renkdegis()">Renk Değiş</button>
+
+
+</body>
+</html>
+<script>
+    var status = 0;
+
+    function Renkdegis(){
+
+         if(status == 0){
+            $(".content").css('color','red');
+            status = 1;
+         }
+         else{
+            $(".content").css('color','black');
+            status = 0;
+         }
+
+         //id si main olan
+         //$("#main")
+
+         //div içerisinde class ı content olanlar
+         //$("div .content")
+    }
+</script>

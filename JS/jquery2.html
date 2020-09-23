@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    <input type="text" id="data">
+    <button onclick="Ekle()">Ekle</button>
+    <ul>
+
+    </ul>
+</body>
+</html>
+<script>
+    var datas = [];
+    function Ekle(){
+        var x = $("#data").val();
+        if(x != ''){
+
+            if(!datas.includes(x)){
+                datas.push(x);
+                $("ul").append("<li>" + x + "</li>");
+            }
+        }
+    }
+</script>
