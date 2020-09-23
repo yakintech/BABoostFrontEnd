@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+        .main{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vel porro incidunt unde temporibus ad explicabo blanditiis facere rem dicta consequuntur excepturi nostrum eveniet quos impedit, quibusdam voluptates necessitatibus voluptate?</p>
+
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+
+</body>
+</html>
+<script>
+    $("#add").click(function(){
+        $("p").addClass("main");
+    })
+
+    $("#remove").click(function(){
+        $("p").removeClass("main");
+    })
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <button>Git Data ÇEK!!!</button>
+</body>
+</html>
+<script>
+    $("button").click(function(){
+        var url = "https://northwind.now.sh/api/categories";
+        $.getJSON(url,function(data){
+            console.log(data);
+
+            //1. yol
+            //JS foreach
+            data.forEach(function(item) {
+                console.log(item.name)
+            });
+
+            //JQuery foreach
+            //2. yol
+            // $.each(data,function(key,item){
+            //     //console.log(item.name)
+            // })
+
+            //JQuery map 
+            //3.yol
+            //$.map(data,function(item){
+                //console.log(item.name)
+            //})
+
+        })
+    });
+
+    
+
+</script>

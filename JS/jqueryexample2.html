@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+        }
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <button>Tıkla</button>
+</body>
+</html>
+<script>
+    // Ekrana bir buton koy. Butona her tıkladığında genişliği, yüksekliği ve arka plan rengi belli bir div body içerisine append etsin. (divler yanyana gelirse güzel olur)
+    $("button").click(function(){
+        // $("body").append("<div class='box'></div>")
+         $("body").append("<div><span>Yunus</span></div>");
+         $("div").css("background-color","tomato");
+         $("div").css("width","200px")
+         $("div").css("height","200px")
+
+
+    })
+
+    $("body").click(function(){
+        console.log("çok saçma bir istek oldu")
+    })
+</script>

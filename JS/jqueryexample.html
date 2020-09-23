@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <input type="text" id="data1">
+    <input type="text" id="data2">
+
+    <button>Tıkla</button>
+    <div></div>
+</body>
+
+</html>
+<script>
+    // Ekrana 2 input, 1 buton ve bir div koy. Butona tıkladıkça 2 inputtan aldığı değerleri aralarında boşluk kalacak şekilde alsın. (Çağatay Yıldız). Daha sonra div içerisine p append edip içeriği p içine yazdırsın
+
+    $("button").click(function () {
+        var x = $("#data1").val();
+        var y = $("#data2").val();
+
+        $("div").append("<p>" + x + ' ' + y + "</p>");
+    })
+</script>
