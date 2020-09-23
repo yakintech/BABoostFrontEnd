@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
+
 <body>
     <button>Git Data ÇEK!!!</button>
 </body>
+
 </html>
 <script>
-    $("button").click(function(){
+    $("button").click(function () {
         var url = "https://northwind.now.sh/api/categories";
-        $.getJSON(url,function(data){
-            console.log(data);
+        $.getJSON(url, function (ece) {
+            console.log(ece);
 
             //1. yol
             //JS foreach
-            data.forEach(function(item) {
+            ece.forEach(function (item) {
                 console.log(item.name)
             });
 
@@ -31,12 +34,21 @@
             //JQuery map 
             //3.yol
             //$.map(data,function(item){
-                //console.log(item.name)
+            //console.log(item.name)
             //})
 
         })
     });
 
-    
+    //bir buton ve bir ul koy. Butona tıkladığında servisten ürünleri çeksin ve adlarını ul içerisine li eklesin.
+    //https://northwind.now.sh/api/products
+
+    //foreach içine yazılacak
+    // data.forEach(function (item) {
+    //     $("ul").append("<li>" + item.name + "</li>");
+    // });
+  
+        //Sipariş ID, Orderdate ve toplamsepet fiyatını li lere yazdır ( 1023 - 01.01.2000 - 450 ) FAKAT fiyat 200 den büyükse li kırmızı olsun 
+
 
 </script>

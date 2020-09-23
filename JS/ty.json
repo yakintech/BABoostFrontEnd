@@ -1,0 +1,93 @@
+{
+      "shipmentAddress": {
+        "id": 608319016,
+        "firstName": "Şeyma ",
+        "lastName": "Bostancı",
+        "address1": "Vişnezade mahallesi Çatlakçeşme sokak no:14 D:3 ",
+        "address2": "",
+        "city": " İstanbul ",
+        "cityCode": 34,
+        "district": "Beşiktaş",
+        "districtId": 56,
+        "postalCode": "",
+        "countryCode": "tr",
+        "neighborhoodId": 28950,
+        "neighborhood": "Vişnezade Mah",
+        "fullAddress": "Vişnezade mahallesi Çatlakçeşme sokak no:14 D:3   Beşiktaş  İstanbul ",
+        "fullName": "Şeyma  Bostancı"
+      },
+      "orderNumber": "352850847",
+      "grossAmount": 5.5,
+      "totalDiscount": 0,
+      "taxNumber": null,
+      "invoiceAddress": {
+        "id": 608319015,
+        "firstName": "Şeyma ",
+        "lastName": "Bostancı",
+        "company": "",
+        "address1": "Vişnezade mahallesi Çatlakçeşme sokak no:14 D:3 ",
+        "address2": "",
+        "city": " İstanbul ",
+        "cityCode": 34,
+        "district": "Beşiktaş",
+        "districtId": 56,
+        "postalCode": "",
+        "countryCode": "tr",
+        "neighborhoodId": 28950,
+        "neighborhood": "Vişnezade Mah",
+        "fullAddress": "Vişnezade mahallesi Çatlakçeşme sokak no:14 D:3   Beşiktaş  İstanbul ",
+        "fullName": "Şeyma  Bostancı"
+      },
+      "customerFirstName": "Şeyma ",
+      "customerEmail": "pf+ex4pk9mp@trendyolmail.com",
+      "customerId": 10515984,
+      "customerLastName": "Bostancı",
+      "id": 252436912,
+      "cargoTrackingNumber": 7282976413371,
+      "cargoProviderName": "MNG Kargo Marketplace",
+      "lines": [
+        {
+          "quantity": 1,
+          "salesCampaignId": 531239,
+          "productSize": "Tek Ebat",
+          "merchantSku": "153.01.01.01",
+          "productName": "Nepro Kalem NP01, one size",
+          "productCode": 87349433,
+          "merchantId": 211048,
+          "amount": 5.5,
+          "discount": 0,
+          "discountDetails": [
+            {
+              "lineItemPrice": 5.5,
+              "lineItemDiscount": 0
+            }
+          ],
+          "currencyCode": "TRY",
+          "productColor": "Kırmızı",
+          "id": 416656089,
+          "sku": "8692563251423",
+          "vatBaseAmount": 8,
+          "barcode": "8692563251423",
+          "orderLineItemStatusName": "ReadyToShip",
+          "price": 5.5
+        }
+      ],
+      "orderDate": 1600603139109,
+      "tcIdentityNumber": "99999999999",
+      "currencyCode": "TRY",
+      "packageHistories": [
+        {
+          "createdDate": 1600592340845,
+          "status": "Awaiting"
+        },
+        {
+          "createdDate": 1600592342472,
+          "status": "Created"
+        }
+      ],
+      "shipmentPackageStatus": "ReadyToShip",
+      "deliveryType": "normal",
+      "estimatedDeliveryStartDate": 1600678738000,
+      "estimatedDeliveryEndDate": 1601024338000,
+      "totalPrice": 5.5
+    }
