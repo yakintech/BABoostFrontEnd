@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <div>
+            <label for="">Ad</label>
+            <input type="text" id="ad">
+        </div>
+        <div>
+            <label for="">Açıklama</label>
+            <input type="text" id="aciklama">
+        </div>
+
+        <button>Gönder</button>
+    </div>
+
+
+    <table>
+        <tr>
+            <td>Ad</td>
+            <td>Soyad</td>
+            <td>Açıklama</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+
+    
+$("table").append("<tr><td>" + item.companyname + "</td><td>" + item.contacttile +"</td><td>Test</td>")
+
+
+
+    $("button").click(function () {
+        var adres = new Object();
+        
+
+        var category = new Object();
+        category.name = $("#ad").val();
+        category.description = $("#aciklama").val();
+
+        category.address = adres;
+
+        $.ajax({
+            url: "https://northwind.now.sh/api/categories",
+            type: "POST",
+            data: category,
+            success: function () {
+                alert("DATA EKLENDİ!");
+            }
+        })
+
+    })
+
+
+    
+
+
+    // var data = {
+    //     companyName: $("#c").val(),
+    //     contactName: "asdasd",
+    //     address: {
+    //         street: 'asdasd'
+    //     }
+
+    // }
+</script>
