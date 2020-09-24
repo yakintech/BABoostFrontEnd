@@ -12,29 +12,103 @@
 </head>
 
 <body>
-    <div>
-        <table class="table">
-            <thead class="thead-dark">
-                <th>Company Name</th>
-                <th>Contact Name</th>
-                <th>İşlem</th>
-            </thead>
-        </table>
+
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>Supplier Ekleme</h1>
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Company Name</label>
+                <input type="text" class="form-control" id="companyname" placeholder="Enter email">
+
+            </div>
+
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Contact Name</label>
+                <input type="text" class="form-control" id="contactname" placeholder="Enter email">
+
+            </div>
+        </div>
+        <button type="button" id="add" class="btn btn-primary">Add</button>
+        <div class="row" style="margin-top: 20px;">
+            <table class="table">
+                <thead class="thead-dark">
+                    <th>Company Name</th>
+                    <th>Contact Name</th>
+                    <th>İşlem</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
 </body>
 
 </html>
 <script>
-    $.getJSON("https://northwind.now.sh/api/suppliers", function (data) {
-        data.forEach(function (item) {
-            $("table").append(`
-            <tr>
-                <td>`+ item.companyName + `</td>
-                <td>`+ item.contactName + `</td>
-                <td>BOŞ</td>
-            </tr>
-            `)
-        });
+
+    Doldur();
+
+    $(document).on("click", "#add", function () {
+
+        //1. yol
+        var supplier = new Object();
+        supplier.companyName = $("#companyname").val();
+        supplier.contactName = $("#contactname").val();
+
+        //2. yol
+        // var supplier =  {
+        //     companyName: $("#companyname").val(),
+        //     contactName: $("#contactname").val()
+        // };
+
+        $.ajax({
+            url: "https://northwind.now.sh/api/suppliers",
+            type: "POST",
+            data: supplier,
+            success: function () {
+                alert("EKLENDİ!");
+                $("tbody tr").remove();
+                Doldur();
+            }
+        })
+
+
     })
+
+    $(document).on("click", ".btn-danger", function () {
+        $(this).parent().parent().fadeOut();
+    })
+
+    // $("button").click(function(){
+    //     alert("alert versin");
+    // })
+
+
+    function Doldur() {
+
+        $.getJSON("https://northwind.now.sh/api/suppliers", function (mustafa) {
+            
+            var result = data.reverse();
+
+
+
+
+            result.forEach(function (item) {
+
+            });
+
+
+        })
+
+    }
+
+    
+
 </script>
