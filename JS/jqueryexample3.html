@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label> <br>
+            <button id="radiosec">Seçili Olanı Yaz!</button>
+        </div>
+        <div>
+            <select id="city">
+                <option value="1">İzmir</option>
+                <option value="2">İstanbul</option>
+                <option value="3">Ankara</option>
+            </select>
+
+            <ul>
+                <li>Nijerya</li>
+                <li>Zimbabwe</li>
+                <li>Güney Afrika</li>
+                <li>Nepal</li>
+                <li>Madagascar</li>
+                <li>Senegal</li>
+            </ul>
+            <button id="yakala">Yakala</button>
+
+        </div>
+        <input type="text" name="" id="">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Şehir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Çağatay</td>
+                    <td>Yıldız</td>
+                    <td>İstanbul</td>
+                </tr>
+                <tr>
+                    <td>Barış</td>
+                    <td>Karapelit</td>
+                    <td>KKTC</td>
+                </tr>
+                <tr>
+                    <td>Korhan</td>
+                    <td>Kösece</td>
+                    <td>Paris</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="getnames">Get Names</button>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    $("#getnames").click(function () {
+        var soyadlar = [];
+
+
+        var table = document.getElementsByTagName("table")[0];
+        var rowlength = table.rows.length;
+
+        for (i = 1; i < rowlength; i++) {
+            var row = table.rows[i];
+
+            var data = row.cells[1].innerText;
+            soyadlar.push(data);
+        }
+
+        console.log(soyadlar)
+
+        // $('table > tbody > tr').each(function(key,item) {
+        //     var data = $(item).children()[1].innerText;
+
+        //     soyadlar.push(data);
+
+        // });
+
+        // console.log(soyadlar);
+    })
+
+    $("#radiosec").click(function () {
+        var sonuc = $("input[name=gender]:checked").val();
+        if (sonuc != undefined) {
+            console.log(sonuc);
+        }
+    })
+    $("input[type='radio']").change(function () {
+
+        //1. yol
+        // var sonuc = $("input[name=gender]:checked").val();
+
+        //2. yol
+        var sonuc = $(this).val();
+        console.log(sonuc);
+    })
+
+    $(document).on("change", "#city", function () {
+
+        //1. yol
+        var secilen = $(this).children("option:selected").val()
+        var x = $(this).children("option:selected").html();
+
+        //2. yol
+        var secilen2 = $(this).val();
+
+    })
+
+    $("#yakala").click(function () {
+        //var li = $("li:eq(4)").html();
+
+        //var li = $("ul").children()[3].innerHTML;
+        //var li = $('li:last-child').html();
+        //var li = $('li:first-child').html();
+        var li = $('ul li:nth-child(2)').html();
+
+        console.log(li);
+    })
+</script>
