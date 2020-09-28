@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    // function Topla(ad, soyad) {
+    //     var sonuc = ad + soyad;
+    //     return sonuc;
+    // }
+
+    var topla = function (ad, soyad) {
+        var sonuc = ad + soyad;
+        return sonuc;
+    }
+
+
+
+    //iki tane değer alıp bu değerli büyültüp(metinsel olarak), birleştirip geriye döndüren fonksiyon
+    function Topla2(ad, soyad) {
+        var sonuc = ad + ' ' + soyad;
+        return sonuc.toUpperCase();
+    }
+
+
+    var kisi = new Object();
+    kisi.ad = "";
+    kisi.soyad = "";
+    kisi.yas = 11;
+    kisi.merhaba = function () {
+        alert(" Merhaba! ")
+    }
+
+    //Dışarıdan fiyat ve kdv oranı alan. fiyatı kdv ile çarpıp sonucunu dönen fonksiyonu yaz. FAKAT kdv yollamadıysa kdv yi %8 den hesaplasın
+    function KDVHesapla(price, kdv) {
+        var sum = 0;
+        if (kdv != undefined) {
+            var sum = Number(price) + Number(price * kdv);
+        }
+        else {
+            var sum = price * 0.08;
+        }
+
+        return sum;
+    }
+
+    function KDVHesapla(price, kdv = 0.08) {
+        var sum = Number(price) + Number(price * kdv);
+        return sum;
+    }
+
+
+    function greet(input) {
+        return input ?? "Hello world";
+    }
+
+
+    //Dışarıdan bir dizi ve bir sayı alsın. Dizinin o sayınıncı elemanını versin
+    function Arrayli(arrayy, indeks){
+        return arrayy[indeks];
+    }
+
+    var d = new Date();
+
+
+    //Dışarıdan bir dizi ve bir sayı alsın. Dizinin o sayınıncı elemanına kadar olan sayıları toplayıp return etsin
+
+
+
+
+
+
+</script>
