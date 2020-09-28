@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>CustomerID</td>
+                <td>Ship Name</td>
+                <td>City</td>
+                <td>Price</td>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    $.getJSON("https://northwind.now.sh/api/orders", function (data) {
+        data.forEach(function (item) {
+            var TotalPrice = 0;
+            item.details.forEach(function (detail) {
+                TotalPrice = TotalPrice + (detail.unitPrice * detail.quantity);
+            })
+
+
+            $("table").append(`
+            <tr>
+                <td>`+ item.customerId + `</td>
+                <td>`+ item.shipName + `</td>
+                <td>`+ item.shipAddress.city + `</td>
+                <td>`+ TotalPrice.toFixed(2) + `</td>
+            </tr>
+            `)
+        });
+    })
+
+
+
+</script>
