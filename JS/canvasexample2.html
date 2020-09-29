@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="gamebox" style="border: 1px solid black;" width="1000" height="600"></canvas>
+</body>
+
+</html>
+<script>
+
+    //Bir canvas oluştur. Her saniyede 2 tane 50*50 kutu oluştur.
+
+    setInterval(() => {
+        var game = document.getElementById("gamebox");
+        var gamecontext = game.getContext('2d');
+
+        var randomtop = Math.floor((Math.random() * 550) + 1);
+        var randomleft = Math.floor((Math.random() * 950) + 1);
+
+        var randomtop2 = Math.floor((Math.random() * 550) + 1);
+        var randomleft2 = Math.floor((Math.random() * 950) + 1);
+
+        gamecontext.fillStyle = 'tomato';
+        gamecontext.fillRect(randomleft,randomtop, 50, 50);
+
+        gamecontext.fillStyle = 'aqua';
+        gamecontext.fillRect(randomleft2,randomtop2, 50, 50);
+
+    }, 1000);
+
+</script>
