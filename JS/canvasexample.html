@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <canvas id="productbox" style="border: 1px solid black;" width="800" height="300">
+
+    </canvas>
+</body>
+
+</html>
+<script>
+
+    $.getJSON("https://northwind.now.sh/api/products", function (data) {
+
+        var urunler = [];
+        for (i = 0; i < 5; i++) {
+            urunler.push(data[i]);
+        }
+
+        var renkler = ['tomato', 'aqua', 'black', 'teal', 'green'];
+
+        var l = 20;
+        for (i = 0; i < urunler.length; i++) {
+            var price = urunler[i].unitPrice * 3
+            var c = new component(l, (300 - price) - 60, renkler[i], 100, price, urunler[i].name,l, 290);
+            l = l + 120;
+        }
+
+    });
+
+
+
+    function component(left, top, style, width, height, text, textl, textt) {
+        this.l = left;
+        this.t = top;
+        this.s = style;
+        this.w = width;
+        this.h = height;
+        this.text = text;
+        this.textleft = textl;
+        this.texttop = textt;
+
+        var product = document.getElementById("productbox");
+        var pcontext = product.getContext("2d");
+        pcontext.fillStyle = this.s;
+        pcontext.fillRect(this.l, this.t, this.w, this.h);
+
+        pcontext.font = "8px Arial";
+        pcontext.fillStyle = "black";
+        pcontext.fillText(this.text, this.textleft, this.texttop);
+    }
+
+</script>

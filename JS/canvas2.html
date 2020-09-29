@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="gamebox" style="border: 1px solid black;" width="500" height="300">
+
+    </canvas>
+</body>
+
+</html>
+<script>
+
+    // gcontext.fillStyle = 'tomato';
+    // //left,top,width,height
+    // gcontext.fillRect(20,20,100,100);
+
+
+    var c = new component(10, 100, 'tomato', 100, 200);
+    var c = new component(140, 200, 'yellow', 100, 100);
+
+
+    function component(left, top, style, width, height) {
+        this.l = left;
+        this.t = top;
+        this.s = style;
+        this.w = width;
+        this.h = height;
+        var game = document.getElementById("gamebox");
+        var gcontext = game.getContext("2d");
+        gcontext.fillStyle = this.s;
+        gcontext.fillRect(this.l, this.t, this.w, this.h);
+    }
+//<canvas id="gamebox" style="border: 1px solid black;" width="500" height="300">
+
+// </canvas>
+</script>

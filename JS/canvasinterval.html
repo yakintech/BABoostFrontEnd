@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Start()">Basla</button>
+    <canvas id="gamebox" style="border: 1px solid black;" width="800" height="300">
+
+    </canvas>
+</body>
+
+</html>
+<script>
+
+
+
+    // var lasttop = 0;
+    // var lastleft = 0;
+    // setInterval(() => {
+
+    //     var game = document.getElementById("gamebox");
+    //     var gcontext = game.getContext('2d');
+    //     gcontext.clearRect(lasttop, lastleft, 50, 50);
+
+    //     var randomtop = Math.floor((Math.random() * 200) + 1);
+    //     var randomleft = Math.floor((Math.random() * 500) + 1);
+
+    //     gcontext.fillStyle = 'tomato';
+    //     gcontext.fillRect(randomtop, randomleft, 50,50);
+
+    //     lasttop = randomtop;
+    //     lastleft = randomleft;
+
+    // }, 800);
+
+    function Start(){
+        var lastleft = 0;
+    var sayac = 800;
+    var boxw = 20;
+    var boxt = 100
+
+    var myVar = setInterval(gamestart, 30);
+
+    function stopgame() {
+        clearInterval(myVar);
+    }
+
+
+    function gamestart() {
+
+        var game = document.getElementById("gamebox");
+        var gcontext = game.getContext('2d');
+        gcontext.clearRect(sayac + 10, 0, boxw, boxt);
+
+        gcontext.fillStyle = 'tomato';
+        gcontext.fillRect(sayac, 0, boxw, boxt);
+
+        sayac = sayac - 10;
+
+        if (sayac == 0) {
+            gcontext.clearRect(sayac + 10, 0, boxw, boxt);
+            sayac = 800;
+        }
+
+        if (sayac == 200) {
+            stopgame();
+        }
+    }
+
+    }
+
+
+</script>
