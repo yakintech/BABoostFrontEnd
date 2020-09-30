@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    <h1>Ürün Detay</h1>
+    
+    <div>
+        <span>Ad:</span>
+        <span id="ad"></span>
+    </div>
+    <div>
+        <span>Fiyat:</span>
+        <span id="fiyat"></span>
+    </div>
+    <div>
+        <span>Stok</span>
+        <span id="stok"></span>
+    </div>
+</body>
+</html>
+<script>
+    var secilenid = localStorage.getItem("productid");
+    fetch('https://northwind.now.sh/api/products/' + secilenid)
+    .then((res)=> res.json())
+    .then((data)=>{
+        $("#ad").html(data.name);
+        $("#stok").html(data.unitsInStock);
+        $("#fiyat").html(data.unitPrice);
+
+
+    })
+</script>

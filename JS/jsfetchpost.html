@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var product = new Object();
+    product.name = "Samsung";
+    product.unitPrice = 5400;
+    product.quantityPerUnit = '10 koli yumurta';
+
+
+
+    console.log(product);
+    console.log(JSON.stringify(product));
+
+    // fetch("https://northwind.now.sh/api/products/4").then((res)=>res.json())
+    // .then((data)=>{console.log(JSON.parse(data))});
+
+    var url = "https://northwind.now.sh/api/products";
+    fetch(url, {
+        method: 'POST',
+        body:JSON.stringify(product),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then((res)=>res.json())
+    .then((data)=>{console.log(data)})
+    .catch((err)=>{console.log(err)});
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+</body>
+
+</html>
+<script>
+    fetch('https://northwind.now.sh/api/products')
+        .then((res) => res.json())
+        .then((data) => {
+
+            data.forEach(element => {
+                $("ul").append("<li id='" + element.id + "'>" + element.name + "</li>")
+            });
+
+        })
+
+    $(document).on("click", "li", function () {
+
+        var id = $(this).attr("id");
+
+        localStorage.setItem("productid",id);
+
+        window.location.href = 'productdetail2.html';
+
+    })
+</script>

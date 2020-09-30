@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <h1></h1>
+        <p></p>
+    </div>
+</body>
+
+</html>
+<script>
+
+    var data = [];
+
+    // $.getJSON("https://northwind.now.sh/api/products", function (result) {
+
+    //     data = result;
+    //     console.log(data);
+    // });
+    var ad = "asd";
+
+    //https://jsonplaceholder.typicode.com/posts
+    //https://jsonplaceholder.typicode.com/photos
+
+    //Datalar fetch ile url den çekilecek.  h1 e title p ye body yazılacak
+    fetch("https://northwind.now.sh/api/products")
+        .then((res) => res.json())
+        .then((data) => {
+
+            data.forEach(element => {
+                
+            });
+
+        })
+        .catch(() => {
+
+        });
+
+
+
+        //https://jsonplaceholder.typicode.com/todos
+        //userid si 1 olan ve completed true olan kaç tane data var?
+        
+        
+
+
+</script>
